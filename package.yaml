@@ -1,0 +1,23 @@
+descriptor-schema-version: "2.5"
+
+info:
+  name: iox-aarch64-ubuntu
+  description: "Ubuntu Linux for ARM-based Cisco routers with IOx"
+  version: "1.4"
+  author-link: "http://www.cisco.com"
+  author-name: "Cisco Systems"
+
+app:
+  cpuarch: aarch64
+  type: docker
+  resources:
+    profile: exclusive
+    network:
+      -
+        interface-name: eth0
+
+# Specify runtime and startup
+  startup:
+    rootfs: rootfs.tar
+    target: ["bash", "/idle.sh"]
+
