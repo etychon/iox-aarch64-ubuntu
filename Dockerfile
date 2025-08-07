@@ -8,7 +8,8 @@ ADD VERSION .
 
 ADD idle.sh /idle.sh
 
-RUN apt-get update && apt-get install -y joe net-tools iputils-ping telnet dnsutils lsb-release
+RUN apt-get update && apt-get install -y joe net-tools iputils-ping telnet dnsutils lsb-release --no-install-recommends && apt-get clean \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD ["bash", "/idle.sh"]
 

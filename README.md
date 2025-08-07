@@ -103,10 +103,16 @@ ubuntu                                   DEPLOYED
 guestshell                               RUNNING
 ```
 
-Now configure the IOx app's parameters, specifically how the app will access the network and how much resources will be allocated:
+Now configure the IOx app's parameters, specifically how the app will access the network and how much resources will be allocated.
+Enter the following in configuration mode (`conf t`):
 
 ```sh
-
+app-hosting appid ubuntu
+ app-vnic gateway0 virtualportgroup 0 guest-interface 0
+ app-resource profile custom
+  cpu 400
+  memory 1000
+  persist-disk 1000
 ```
 
 
