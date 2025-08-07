@@ -3,7 +3,7 @@ descriptor-schema-version: "2.5"
 info:
   name: iox-aarch64-ubuntu
   description: "Ubuntu Linux for ARM-based Cisco routers with IOx"
-  version: "1.4"
+  version: "1.5"
   author-link: "http://www.cisco.com"
   author-name: "Cisco Systems"
 
